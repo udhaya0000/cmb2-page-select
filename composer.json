@@ -1,0 +1,26 @@
+{
+    "name": "udhaya0000/cmb2-page-select-field",
+    "description": "Custom field for CMB2 which adds a post-search dialog for searching/attaching other post IDs.",
+    "license": "GPL-2.0+",
+    "authors": [
+        {
+            "name": "udhayakumar sadagopan",
+            "email": "udhaya0000@gmail.com",
+            "homepage": "https://github.com/udhaya0000",
+            "role": "Developer"
+        }
+    ],
+    "keywords": ["wordpress", "plugin", "metabox","search","field"],
+    "homepage": "https://github.com/udhaya0000/cmb2-page-select-field",
+    "type": "wordpress-plugin",
+    "support": {
+        "issues": "https://github.com/udhaya0000/cmb2-page-select-field/issues",
+        "source": "https://github.com/udhaya0000/cmb2-page-select-field"
+    },
+    "require": {
+        "php": ">5.2.4"
+    },
+    "suggest": {
+        "composer/installers": "~1.0"
+    }
+}
