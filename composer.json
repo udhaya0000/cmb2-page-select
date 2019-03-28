@@ -13,7 +13,7 @@
     "homepage": "https://github.com/udhaya0000/cmb2-page-select-field",
     "type": "wordpress-plugin",
     "support": {
-        "issues": "https://github.com/udhaya0000/cmb2-page-select-field/issues",
+        "issues": "https://github.com/udhaya0000/cmb2-page-select-field/issues"
     },
     "require": {
         "php": ">5.2.4"
