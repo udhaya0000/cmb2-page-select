@@ -25,7 +25,7 @@
  */
 
 
-if ( ! class_exists( 'CMB2_Page_Select_field', false ) ) {
+if ( ! class_exists( 'CMB2_Page_Select', false ) ) {
 
 	/**
 	 * Versioned loader class-name
@@ -40,7 +40,7 @@ if ( ! class_exists( 'CMB2_Page_Select_field', false ) ) {
 	 * @link      https://github.com/udhaya0000/cmb2-page-select-field
 	 * @since     1.0.0
 	 */
-	class CMB2_Page_Select_field {
+	class CMB2_Page_Select {
 
 		/**
 		 * CMB2_Page_Select_field version number
@@ -70,7 +70,7 @@ if ( ! class_exists( 'CMB2_Page_Select_field', false ) ) {
 		 * @since 1.0.0
 		 */
 		public function __construct() {
-			if ( ! defined( 'CMB2_PAGE_SELECT_FIELD_LOADED' ) ) {
+			if ( ! defined( 'CMB2_PAGE_SELECT_LOADED' ) ) {
 				/**
 				 * A constant you can use to check if CMB2_Page_Select_field is loaded
 				 * for your plugins/themes with CMB2_Page_Select_field dependency.
@@ -78,11 +78,11 @@ if ( ! class_exists( 'CMB2_Page_Select_field', false ) ) {
 				 * Can also be used to determine the priority of the hook
 				 * in use for the currently loaded version.
 				 */
-				define( 'CMB2_PAGE_SELECT_FIELD_LOADED', self::PRIORITY );
+				define( 'CMB2_PAGE_SELECT_LOADED', self::PRIORITY );
 			}
 
 			// Use the hook system to ensure only the newest version is loaded.
-			add_action( 'cmb2_page_select_field_load', array( $this, 'include_lib' ), self::PRIORITY );
+			add_action( 'cmb2_page_select_load', array( $this, 'include_lib' ), self::PRIORITY );
 
 			// Use the hook system to ensure only the newest version is loaded.
 			add_action( 'after_setup_theme', array( $this, 'do_hook' ) );
@@ -96,7 +96,7 @@ if ( ! class_exists( 'CMB2_Page_Select_field', false ) ) {
 		 */
 		public function do_hook() {
 			// Then fire our hook.
-			do_action( 'cmb2_page_select_field_load' );
+			do_action( 'cmb2_page_select_load' );
 		}
 
 		/**
@@ -113,26 +113,26 @@ if ( ! class_exists( 'CMB2_Page_Select_field', false ) ) {
 				return;
 			}
 
-			if ( ! defined( 'CMB2_PAGE_SELECT_FIELD_VERSION' ) ) {
+			if ( ! defined( 'CMB2_PAGE_SELECT_VERSION' ) ) {
 				/**
 				 * Defines the currently loaded version of CMB2_Post_Search_field.
 				 */
-				define( 'CMB2_PAGE_SELECT_FIELD_VERSION', self::VERSION );
+				define( 'CMB2_PAGE_SELECT_VERSION', self::VERSION );
 			}
 
-			if ( ! defined( 'CMB2_PAGE_SELECT_FIELD_DIR' ) ) {
+			if ( ! defined( 'CMB2_PAGE_SELECT_DIR' ) ) {
 				/**
 				 * Defines the directory of the currently loaded version of CMB2_Post_Search_field.
 				 */
-				define( 'CMB2_PAGE_SELECT_FIELD_DIR', dirname( __FILE__ ) . '/' );
+				define( 'CMB2_PAGE_SELECT_DIR', dirname( __FILE__ ) . '/' );
 			}
 
 			// Include and initiate CMB2_Post_Search_field.
-			require_once CMB2_PAGE_SELECT_FIELD_DIR . 'lib/init.php';
+			require_once CMB2_PAGE_SELECT_DIR . 'lib/init.php';
 		}
 
 	}
 
 	// Kick it off.
-	new CMB2_Page_Select_field;
+	new CMB2_Page_Select;
 }

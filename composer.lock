@@ -4,12 +4,14 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "28e0bdab0ac6867dc2e14c2085b02c2a",
+    "content-hash": "c6ac4c65d0f905409f70aff918d66b7a",
     "packages": [],
     "packages-dev": [],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": [],
+    "stability-flags": {
+        "udhaya0000/cmb2-page-select": 20
+    },
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {
